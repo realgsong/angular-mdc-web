@@ -6,4 +6,6 @@ export class MdcSnackbarConfig {
   align?: string = 'center';
   dismissOnAction?: boolean = true;
   focusAction?: boolean = false;
+
+  parent?: HTMLElement = document.body;
 }

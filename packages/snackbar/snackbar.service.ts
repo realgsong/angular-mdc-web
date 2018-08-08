@@ -39,8 +39,9 @@ export class MdcSnackbar implements OnDestroy {
     }
 
     config = this._applyConfigDefaults(config);
+
     this._openedSnackbarRef
-      = new MdcSnackbarRef<MdcSnackbarComponent>(this._portalService.createComponentRef(MdcSnackbarComponent).instance);
+      = new MdcSnackbarRef<MdcSnackbarComponent>(this._portalService.createComponentRef(MdcSnackbarComponent, config.parent).instance);
 
     this._openedSnackbarRef.componentInstance.data = { message, actionText };
     this._openedSnackbarRef.componentInstance.config = config;
